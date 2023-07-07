@@ -8,9 +8,7 @@ export default withPageAuthRequired(function ProfileApi() {
 
 	useEffect(() => {
 		(async () => {
-			const res = await fetch(
-				`${window.location.origin}/api/edge-profile`
-			);
+			const res = await fetch(`${window.location.origin}/api/profile`);
 			setUser(await res.json());
 		})();
 	}, []);
