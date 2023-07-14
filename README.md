@@ -1,5 +1,5 @@
-This is an implementation of the Auth0 beta release for NextJS 13 with App Router. It uses the beta version of 
-the Auth0 SDK that has support for the app directory. 
+This is an implementation of the Auth0 beta release for NextJS 13 with App Router. It uses the beta version of
+the Auth0 SDK that has support for the app directory.
 
 NextJS-Auth0 v3 Beta release: https://github.com/auth0/nextjs-auth0/issues/1235
 
@@ -11,3 +11,4 @@ Sample client-side hook usage: https://github.com/auth0/nextjs-auth0/blob/beta/e
 For SSR components, I can access the authentication state with Route Handlers (previously API Routes).
 Sample server-side call: https://github.com/auth0/nextjs-auth0/blob/beta/example-app/app/server-component.tsx
 
+More notes on the beta Auth0 SDK for NextJS App Router: https://github.com/auth0/nextjs-auth0/blob/beta/EXAMPLES.md

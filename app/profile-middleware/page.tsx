@@ -14,6 +14,14 @@ export default async function Page() {
 			<pre>
 				{JSON.stringify({ accessToken: session?.accessToken }, null, 2)}
 			</pre>
+			<h3>Refresh Token</h3>
+			<pre>
+				{JSON.stringify(
+					{ refreshToken: session?.refreshToken },
+					null,
+					2
+				)}
+			</pre>
 			<h3>User</h3>
 			<pre>{JSON.stringify(session?.user, null, 2)}</pre>
 			<h2>Server Component:</h2>
