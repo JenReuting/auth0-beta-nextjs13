@@ -1,5 +1,11 @@
-import { getSession } from '@auth0/nextjs-auth0';
+import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { redirect } from 'next/navigation';
+
+/* Notes: For some reason, after logout, the client still sends the session id
+in the request and the session re-validates when navigating to a protected page.
+
+I tried the withPageAuthRequired wrapper and it did not fix the
+logout functionality. This can be seen by going to /profile-ssr */
 
 export default async function Page() {
 	const session = await getSession();

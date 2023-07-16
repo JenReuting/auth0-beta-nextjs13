@@ -41,5 +41,5 @@ export default withPageAuthRequired(
 			</section>
 		);
 	},
-	{ returnTo: '/profile' }
+	{ returnTo: '/profile-ssr' }
 );
