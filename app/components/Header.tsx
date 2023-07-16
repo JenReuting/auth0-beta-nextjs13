@@ -1,11 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { getSession } from '@auth0/nextjs-auth0';
 import SignInButton from './SignInButton';
 
-export default function Header() {
+export default async function Header() {
 	// const pathname = usePathname();
 	// const pageName = pathname?.split('/').pop();
+	const session = await getSession();
+
+	console.log(
+		'Session User from header -----> ',
+		JSON.stringify(session?.user)
+	);
 
 	return (
 		<>
@@ -26,9 +33,15 @@ export default function Header() {
 								Profile (Middleware)
 							</Link>
 						</li>
-						<li>
-							<SignInButton />
-						</li>
+						{session ? (
+							<li>
+								<Link href='/api/auth/logout'>Logout</Link>
+							</li>
+						) : (
+							<li>
+								<SignInButton />
+							</li>
+						)}
 					</ul>
 				</nav>
 			</header>

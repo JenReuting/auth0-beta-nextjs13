@@ -6,11 +6,11 @@ import Link from 'next/link';
 const SignInButton = () => {
 	const user = useUser();
 
-	console.log('user from useUser hook ----> ', user);
+	console.log('user ----> ', user);
 
 	return (
 		<button className='rounded-md border border-stone-300 px-3 py-1 text-sm dark:border-stone-600'>
-			<Link href='/api/auth/login?returnTo=/protected-ssr'>Sign In</Link>
+			<Link href='/api/auth/logout'>Sign Out</Link>
 		</button>
 	);
 };

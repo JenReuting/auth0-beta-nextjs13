@@ -1,4 +1,3 @@
-import React from 'react';
 import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
 import ServerComponent from '@/app/server-component';
 import ClientComponent from '@/app/client-component';
