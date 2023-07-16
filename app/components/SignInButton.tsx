@@ -6,11 +6,7 @@ import Link from 'next/link';
 const SignInButton = () => {
 	const user = useUser();
 
-	const viewUser = () => {
-		user.user ? console.log(user) : console.log('no user');
-	};
-
-	viewUser();
+	console.log('user ----> ', user);
 
 	return (
 		<>
@@ -20,7 +16,9 @@ const SignInButton = () => {
 				</button>
 			) : (
 				<button className='rounded-md border border-stone-300 px-3 py-1 text-sm dark:border-stone-600'>
-					<Link href='/api/auth/login'>Sign In</Link>
+					<Link href='/api/auth/login?returnTo=/profile'>
+						Sign In
+					</Link>
 				</button>
 			)}
 		</>

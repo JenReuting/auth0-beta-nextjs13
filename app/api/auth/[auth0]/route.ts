@@ -6,7 +6,4 @@ export const GET = handleAuth({
 	onError(req: Request, error: Error) {
 		console.error(error);
 	},
-	// callback: handleCallback({
-	// 	redirectUri: 'http://localhost:3000/dashboard',
-	// }),
 });
